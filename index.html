@@ -10,20 +10,22 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 <body>
     <header class="header">
-        <a href="#" class="logo">MPL</a>
+        <a class="logo" href="#">
+            <img src="image/MPLEE1.png" alt="logo"></a>
         
 
         <nav class="navbar">
             <a href="#">Home</a>
             <a href="#skills">Skills</a>
             <a href="#project">Projects</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
@@ -31,55 +33,55 @@
         <div class="home-content">
             <h1>HI! I'm Miguel P. Lee</h1>
             <h3>Web Developer</h3>
-            <p>Welcome! to the digital realm of Miguel P. Lee,
-                a 21-year-old IT enthusiast and Web Development major at Holy Angel University.
-                I invite you to explore my virtual portfolio, 
-                a curated collection that reflects
-                my passion for crafting innovative and visually appealing web solutions.
-                Join me on this digital voyage as we navigate through a spectrum of projects.
-            </p>
+            <p>Welcome! to the digital realm of Miguel P. Lee, a 21-year-old IT enthusiast and Web Development major at Holy Angel University. I invite you to explore my virtual portfolio, a curated collection that reflects my passion for crafting innovative and visually appealing web solutions. Join me on this digital voyage as we navigate through a spectrum of projects.</p>
+            <div class="home-social">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-gmail"></i></a>
+            </div>
         </div>
-        <img src="image/profile.png" alt="Me" style="float: right";>
-        <div class="home-social">
-            <a href="#"><i class="bx bxl-facebook"></i></a>
-            <a href="#"><i class="bx bxl-gmail"></i></a>
-
+        <div class="home-image">
+            <img src="image/profile.png" alt="Me">
         </div>
     </section>
-<!-- skills section -->
-    <section class="skills" id="skills">
-        <h2 class="heading">My <span>Skills</span></h2>
+    
 
-        <div class="skills-row">
-            <div class="skills-column">
-                <h3 class="title">WEB Development</h3>
+<!-- skills section -->
+<section class="skills" id="skills">
+    <h2 class="heading">My <span>Skills</span></h2>
+
+    <div class="skills-row">
+        <div class="skills-column">
+            <div class="skill-item">
+                <h3 class="title"><i class="fas fa-code"></i> Web Development</h3>
 
                 <div class="skills-box">
                     <div class="skills-content">
                         <div class="progress">
-                            <h3>HTML <span>70%</span></h3>
-                            <div class="bar"><span></span></div>
+                            <h4>HTML <span>80%</span></h4>
+                            <div class="bar"><span style="width: 80%;"></span></div>
                         </div>
 
                         <div class="progress">
-                            <h3>CSS <span>60%</span></h3>
-                            <div class="bar"><span></span></div>
+                            <h4>CSS <span>80%</span></h4>
+                            <div class="bar"><span style="width: 80%;"></span></div>
                         </div>
 
                         <div class="progress">
-                            <h3>JavaScript <span>50%</span></h3>
-                            <div class="bar"><span></span></div>
+                            <h4>JavaScript <span>50%</span></h4>
+                            <div class="bar"><span style="width: 50%;"></span></div>
                         </div>
 
                         <div class="progress">
-                            <h3>Graphics Design <span>60%</span></h3>
-                            <div class="bar"><span></span></div>
+                            <h4>Design <span>60%</span></h4>
+                            <div class="bar"><span style="width: 60%;"></span></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
     <!--Project section-->
     <section>
         <div id="portfolio" id="project">
@@ -125,5 +127,95 @@
     <section>
 
     </section>
+    <section>
+    <!--About section-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/profileabout.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hey! I'm Miguel Pasion Lee, currently 21 years old and deeply immersed in the world of web development as a student at Holy Angel University. 
+                        Exploring the ins and outs of coding and design is my jam, constantly on the lookout for new ways to bring ideas to life digitally. 
+                        Whether it's crafting visually stunning websites or diving into the nitty-gritty of backend development, 
+                        I'm all about mastering the craft and delivering impactful online experiences. Come along with me on this journey as I continue to learn, 
+                        grow, and contribute to the exciting landscape of technology!</p>
+
+                         <div class="tab-titles">
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                         </div>
+
+                         <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2019 - Current</span><br>Holy Angel University</li>
+                                <li><span>2017 - 2015</span><br>San Vicente Pilot School for Philippine Craftsmen</li>
+                                <li><span>2014 - 2009</span><br>Bacolor Elementary School</li>
+                            </ul>
+                         </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+            
+        }
+
+    </script>
+</section>
+
+<!--Contact section-->
+
+<section>
+<div id="contact">
+<p class="section_text_p1">Get In Touch</p>
+<h1 class="title">Contact Me</h1>
+<div class="contact-info-upper-container">
+    <div class="contact-info-container">
+        <img src="image/email3.png"
+        alt="Email icon"
+        class="icon contact-icon email-icon"/>
+        <p><a style="text-decoration:none" href="mailto:miguellee06@gmail.com">miguellee06@gmail.com</a></p>
+    </div>
+    <div class="contact-info-container">
+        <img src="image/fb3.png"
+        alt="Facebook icon"
+        class="icon contact-icon"/>
+        <p><a style="text-decoration:none" href="https://www.facebook.com/miguel.p.lee">Facebook</a></p>
+    </div>
+</div>
+</div>
+
+</section>
 </body>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <h3>About</h3>
+            <p>Im Miguel Pasion Lee. A Web Developer student!</p>
+        </div>
+        <div class="footer-right">
+            <h3>Contact Us</h3>
+            <p>Email: miguellee06@gmail.com</p>
+            <p>Phone: +63975600013</p>
+        </div>
+    </div>
+</footer>
 </html>
