@@ -12,12 +12,14 @@
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="javascript.js"></script>
 </head>
 
 <body>
+    
     <header class="header">
         <a class="logo" href="#">
-            <img src="image/MPLEE1.png" alt="logo"></a>
+            <img src="image/MPLEE1-rm-bg.png" alt="logo"></a>
         
 
         <nav class="navbar">
@@ -25,6 +27,7 @@
             <a href="#skills">Skills</a>
             <a href="#project">Projects</a>
             <a href="#about">About</a>
+            <a href="#testimonials">Testimonials</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -35,14 +38,16 @@
             <h3>Web Developer</h3>
             <p>Welcome! to the digital realm of Miguel P. Lee, a 21-year-old IT enthusiast and Web Development major at Holy Angel University. I invite you to explore my virtual portfolio, a curated collection that reflects my passion for crafting innovative and visually appealing web solutions. Join me on this digital voyage as we navigate through a spectrum of projects.</p>
             <div class="home-social">
-                <a href="#"><i class="bx bxl-facebook"></i></a>
-                <a href="#"><i class="bx bxl-gmail"></i></a>
+                <a href="https://www.facebook.com/miguel.p.lee" target="_blank"><i class="bx bxl-facebook"></i></a>
+                <a href="mailto:miguellee06@gmail.com"><i class="bx bxl-gmail"></i></a>
             </div>
+            <a class="header-btn" href="resume/leeresume.pdf" download>Download Resume</a>
         </div>
         <div class="home-image">
             <img src="image/profile.png" alt="Me">
         </div>
     </section>
+    
     
 
 <!-- skills section -->
@@ -57,22 +62,22 @@
                 <div class="skills-box">
                     <div class="skills-content">
                         <div class="progress">
-                            <h4>HTML <span>80%</span></h4>
+                            <h4><img src="image/html.png" alt="CSS Logo"> HTML <span>80%</span></h4>
                             <div class="bar"><span style="width: 80%;"></span></div>
                         </div>
 
                         <div class="progress">
-                            <h4>CSS <span>80%</span></h4>
+                            <h4><img src="image/css.png" alt="CSS Logo"> CSS <span>80%</span></h4>
                             <div class="bar"><span style="width: 80%;"></span></div>
                         </div>
 
                         <div class="progress">
-                            <h4>JavaScript <span>50%</span></h4>
+                            <h4><img src="image/js.png" alt="CSS Logo"> JavaScript <span>50%</span></h4>
                             <div class="bar"><span style="width: 50%;"></span></div>
                         </div>
 
                         <div class="progress">
-                            <h4>Design <span>60%</span></h4>
+                            <h4><img src="image/vector.png" alt="CSS Logo"> Design <span>60%</span></h4>
                             <div class="bar"><span style="width: 60%;"></span></div>
                         </div>
                     </div>
@@ -84,46 +89,38 @@
 
     <!--Project section-->
     <section>
-        <div id="portfolio" id="project">
-            <div class="main-text" id="project">
-                <h2>My<span> Projects</span></h2>
+    <div id="portfolio" id="project">
+        <div class="main-text" id="project">
+            <h2>My<span> Projects</span></h2>
 
-                <div class="portfolio-content">
-                    <div class="row">
+            <div class="portfolio-content">
+                <div class="row">
+                    <a href="https://bikengo.bitbucket.io/" target="_blank">
                         <img src="image/project1.PNG">
                         <div class="layer">
                             <h5>BIKEnGO</h5>
-                            <p>The Bikengo project during my third year of college was 
-                                an exhilarating journey into the world of custom motorcycle design.
-                                Dive into the Bikengo project and witness the synthesis of precision 
-                                engineering and aesthetic flair, 
-                                reflecting the thrill and style of the custom motorcycle industry."
-                                To visit! this is the link ==> https://bikengo.bitbucket.io/
-                            </p>
-
-                            <a href="#"><i class="bx bx-link-external" style="color: aliceblue;"></i></a>
+                            <p>The Bikengo project during my third year of college was an exhilarating journey into the world of custom motorcycle design. Dive into the Bikengo project and witness the synthesis of precision engineering and aesthetic flair, reflecting the thrill and style of the custom motorcycle industry.</p>
+                            <i class="bx bx-link-external" style="color: aliceblue;"></i>
                         </div>
-                    </div>
+                    </a>
+                </div>
 
-                    <div class="row">
+                <div class="row">
+                    <a href="https://threetailors.shop/" target="_blank">
                         <img src="image/project2.PNG">
                         <div class="layer">
                             <h5>THREE TAILORS</h5>
-                            <p>The Three Tailors website, born out of months of dedicated effort, 
-                                stands as a testament to my passion for craftsmanship and design.
-                                Explore the Three Tailors project in https://threetailors.shop/ 
-                                to witness the seamless integration of design, 
-                                functionality, and a deep appreciation for the timeless art of bespoke fashion."
-                            </p>
-
-                            <a href="#"><i class="bx bx-link-external" style="color: aliceblue;"></i></a>
+                            <p>The Three Tailors website, born out of months of dedicated effort, stands as a testament to my passion for craftsmanship and design. Explore the Three Tailors project to witness the seamless integration of design, functionality, and a deep appreciation for the timeless art of bespoke fashion.</p>
+                            <i class="bx bx-link-external" style="color: aliceblue;"></i>
                         </div>
-                    </div>
-                    
+                    </a>
                 </div>
+                
             </div>
         </div>
-    </section>
+    </div>
+</section>
+    
     <section>
 
     </section>
@@ -180,6 +177,31 @@
     </script>
 </section>
 
+<!--Testimonials Section-->
+<h1 class="sub-title">Testimonials</h1>
+
+<section class="testimonials" id="testimonials">
+    <div class="testimonial">
+        <div class="testimonial-content">
+            <img src="image/aron.jpg" alt="Aron">
+            <p>" I was excited to team up with someone who really values fresh ideas and thinking outside the box. 
+                Together, we turned his vision into a real, live website that truly shows off his love and commitment. 
+                Working together was awesome because we bounced ideas off each other and made something really cool happen.</p>
+            <p class="testimonial-author">- Aron Layson</p>
+        </div>
+    </div>
+    <div class="testimonial">
+        <div class="testimonial-content">
+            <img src="image/allen.jpg" alt="Allen">
+            <p>I was really pumped to share my skills and help out. Working with Lee was awesome because she was so into trying out new stuff and bringing fresh ideas to the table. 
+                It felt great teaming up with someone who cares as much about doing a great job as I do.</p>
+            <p class="testimonial-author">- Allen Serrano</p>
+        </div>
+    </div>
+</section>
+
+
+
 <!--Contact section-->
 
 <section>
@@ -191,7 +213,7 @@
         <img src="image/email3.png"
         alt="Email icon"
         class="icon contact-icon email-icon"/>
-        <p><a style="text-decoration:none" href="mailto:miguellee06@gmail.com">miguellee06@gmail.com</a></p>
+        <p><a style="text-decoration:none" href="mailto:miguellee06@gmail.com">Gmail</a></p>
     </div>
     <div class="contact-info-container">
         <img src="image/fb3.png"
