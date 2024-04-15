@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    
 }
 
 body {
@@ -20,16 +21,20 @@ img {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: #3f3f3f;
+    background: rgba(63, 63, 63, 0.5); /* RGBA color with opacity */
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
 
+
 .logo img {
     max-width: 100px; /* Set a maximum width for the logo */
     height: auto; /* Maintain aspect ratio */
+    margin: auto; /* Center the image within the flex container */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
 }
 
 .navbar {
@@ -131,8 +136,79 @@ img {
     font-size: 20px;
 }
 
+/* Keyframes for typewriter animation */
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Apply typewriter animation to home-content */
+.home-content h1,
+.home-content h3 {
+    overflow: hidden; /* Hide overflowing text */
+    white-space: nowrap; /* Prevent text wrapping */
+    animation: typewriter 3s steps(40) infinite; /* Loop the animation infinitely */
+}
+
+/* Delay for h3 */
+.home-content h3 {
+    animation-delay: 2s; /* Delay the animation start by 1 second */
+}
+
+/* profile image animation */
+/* Keyframes for image hover animation */
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Apply hover animation to home image */
+.home-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.home-image img:hover {
+    animation: scaleUp 0.3s ease forwards; /* Apply scale-up animation on hover */
+}
+
+/* Style for the resume download button */
+.header-btn {
+    display: inline-block;
+    background-color: #00abf0;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.header-btn:hover {
+    background-color: #081b29;
+}
+
 
 /* Skill Section */
+
+
 .skills {
     padding: 80px 0;
     text-align: center;
@@ -170,6 +246,20 @@ img {
 
 .skill-item {
     margin-bottom: 40px;
+}
+
+.skill-item h3 img {
+    width: 24px; /* Adjust as needed */
+    height: auto;
+    margin-left: 10px; /* Adjust margin as needed */
+    vertical-align: middle;
+}
+
+.skill-item h4 img {
+    width: 20px; /* Adjust as needed */
+    height: auto;
+    margin-right: 10px; /* Adjust margin as needed */
+    vertical-align: middle;
 }
 
 .title {
@@ -349,6 +439,14 @@ img {
     padding: 80px 0;
     color: #ababab;
 }
+
+#about p {
+    font-size: 20px; /* Adjust as needed */
+    line-height: 1.6; /* Adjust as needed */
+    margin-bottom: 20px; /* Add some spacing between paragraphs */
+    
+}
+
 .row {
     display: flex;
     justify-content: space-between;
@@ -404,11 +502,12 @@ img {
 .tab-contents ul li {
     list-style: none;
     margin: 10px 0;
+    font-size: 20;
 }
 
 .tab-contents ul li span {
     color: #b54769;
-    font-size: 14px;
+    font-size: 20px;
 
 }
 
@@ -419,6 +518,58 @@ img {
 .tab-contents.active-tab {
     display: block;
 }
+
+/*Testimonials*/
+.testimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.testimonial {
+    width: 400px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background color */
+    border-radius: 20px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center content horizontally */
+    gap: 15px; /* Spacing between elements */
+    transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+
+.testimonial:hover {
+    transform: translateY(-5px); /* Move the testimonial up slightly on hover */
+}
+
+.testimonial img {
+    width: 150px; /* Set a specific width for the image */
+    height: 150px; /* Set a specific height for the image */
+    border-radius: 10%; /* Round the image */
+}
+
+.testimonial-content {
+    text-align: center;
+}
+
+.testimonial-content p {
+    color: #333; /* Dark text color */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.testimonial-author {
+    font-family: 'Poppins', sans-serif;
+}
+
+.sub-title {
+    text-align: center;
+    justify-content: center;
+    height: 3em;
+}
+
 
 /*Contact*/
 
