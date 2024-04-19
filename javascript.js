@@ -1,9 +1,13 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the banner and close button elements
+    var bannerContainer = document.getElementById("banner-container");
+    var closeButton = document.getElementById("close-banner");
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+    // Show the banner
+    bannerContainer.style.display = "block";
+
+    // Close banner when close button is clicked
+    closeButton.addEventListener("click", function() {
+        bannerContainer.style.display = "none";
     });
 });
